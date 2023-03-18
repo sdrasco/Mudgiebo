@@ -9,9 +9,7 @@ from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 from kivy.uix.image import Image
-from kivy.uix.scrollview import ScrollView
 from kivy.core.window import Window
-from kivy.loader import Loader
 from PIL import Image as PilImage
 from io import BytesIO
 
@@ -21,7 +19,7 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 class ImageGeneratorApp(App):
 
     def build(self):
-        self.title = "Image Generator"
+        self.title = "Mudgiebo Image Generator"
         root = BoxLayout(orientation="vertical", padding=10, spacing=10)
 
         # Prompt entry
