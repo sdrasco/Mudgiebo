@@ -15,6 +15,8 @@ from kivy.loader import Loader
 from PIL import Image as PilImage
 from io import BytesIO
 
+# get the users api key
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 class ImageGeneratorApp(App):
 
@@ -42,7 +44,6 @@ class ImageGeneratorApp(App):
         root.add_widget(self.image_widget)
 
         # Quit button
-        #quit_button = Button(text="Quit", on_press=Window.close)
         quit_button = Button(text="Quit", on_press=lambda _: Window.close())
         root.add_widget(quit_button)
 
